@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    background: url(port.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.navbar{
+    width: 86%;
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    width: 160px;
+    cursor: pointer;
+    /*margin-top: -3%;
+    margin-left: -2%;*/
+    color: goldenrod;
+    transition: .3s;
+}
+.navbar .logo:hover{
+    color: #ffff;
+    font-size: large;
+}
+.navbar .checkbox{
+    display: none;
+}
+
+.navbar input{
+    display: none;
+}
+
+
+nav .checkbox i{
+    font-size: 2rem;
+    color: #ffff;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
+}
+
+ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: bisque;
+    transition: -4s ease;
+
+}
+
+ul li a:hover{
+    color: #ffff;
+}
+.info{
+    margin-left: 7%;
+    margin-top: 16%;
+}
+.info h1{
+    font-size: 65px;
+    color: #ffff;
+}
+
+.info h3{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #ffff;
+}
+.info span{
+    color: goldenrod;
+}
+.info a{
+    text-decoration: none;
+    color: black;
+    background: gold;
+    margin: 26px 0;
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: .4s ease;
+}
+.info a:hover{
+    background: black;
+    color: #ffff;
+}
+
+
+.icons{
+   position: absolute;
+   left: 8%;
+}
+.icons a{
+    color: bisque;
+    transition: .3s ease;
+
+}
+.icons a:hover{
+    color: goldenrod;
+}
+
+
+@media (width < 750px){
+    .navbar .checkbox{
+        display: block;
+    }
+
+    ion-icon{
+        color: #ffff;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .navbar #check:checked ~ ul{
+        left: 0;
+        display:flex;
+        align-items: center;
+        
+    }
+
+    ul li a{
+        font-size: 15px;
+    }
+   
+    .icons{
+        position: absolute;
+        left: 8%;
+     }
+     .icons a ion-icon{
+        color: bisque;
+        transition: .3s ease;
+    
+    }
+    .icons a ion-icon:hover{
+        color: goldenrod;
+        font-size: 30px
+    }
+
+     
+}
